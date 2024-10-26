@@ -13,6 +13,8 @@ const knipConfig: KnipConfig = {
     "postcss",
     "tailwindcss",
     "postcss-load-config",
+    // TODO: remove
+    "tailwindcss-animate",
   ],
 };
 
