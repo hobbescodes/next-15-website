@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 
+import { Layout } from "@/app/core/components";
+
 import "./globals.css";
 
 import type { Metadata } from "next";
@@ -27,7 +29,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

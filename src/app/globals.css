@@ -72,4 +72,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .grid-rows-layout {
+    grid-template-rows: auto 1fr auto;
+  }
 }
