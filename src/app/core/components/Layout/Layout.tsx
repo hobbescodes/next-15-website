@@ -1,10 +1,14 @@
+import { Footer, Header } from "@/app/core/components";
+
 import type { PropsWithChildren } from "react";
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
-    <main className="flex bg-background text-foreground items-center justify-center h-dvh">
-      {children}
-    </main>
+    <div className="relative grid min-h-screen w-full grid-rows-layout">
+      <Header />
+      <main className="mx-auto flex w-full max-w-6xl items-center justify-center">{children}</main>
+      <Footer />
+    </div>
   );
 };
 
