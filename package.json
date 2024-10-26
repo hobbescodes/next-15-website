@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "babel-plugin-react-compiler": "^19.0.0-beta-8a03594-20241020",
     "next": "15.0.1",
     "react": "19.0.0-rc-fb9a90fa48-20240614",
     "react-dom": "19.0.0-rc-fb9a90fa48-20240614"
@@ -24,6 +25,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "15.0.1",
+    "eslint-plugin-react-compiler": "^19.0.0-beta-8a03594-20241020",
     "husky": "^9.1.6",
     "knip": "^5.34.0",
     "lint-staged": "^15.2.10",
