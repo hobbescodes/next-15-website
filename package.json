@@ -6,7 +6,8 @@
     "dev": "rm -rf .next && next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "biome format --write src"
   },
   "dependencies": {
     "react": "19.0.0-rc-69d4b800-20241021",
@@ -14,6 +15,7 @@
     "next": "15.0.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@tailwindcss/postcss": "^4.0.0-alpha.30",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -23,5 +25,8 @@
     "postcss": "^8",
     "tailwindcss": "^4.0.0-alpha.30",
     "typescript": "^5"
-  }
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
 }
