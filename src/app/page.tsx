@@ -1,5 +1,7 @@
+import { Button } from "@/app/core/components";
+
 const HomePage = () => {
-  return <div>Home Page</div>;
+  return <Button>Home Page</Button>;
 };
 
 export default HomePage;
