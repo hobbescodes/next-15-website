@@ -1,10 +1,11 @@
 import Link from "next/link";
 
+import { Navigation } from "@/app/core/components";
 import { Button } from "@/app/ui";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 w-full py-4 px-6">
+    <header className="sticky top-0 w-full flex justify-between items-center py-4 px-6">
       <Link href="/" className="w-fit">
         <Button variant="unstyled" className="font-semibold gap-0">
           <span className="hidden md:inline">&lt; </span>
@@ -14,6 +15,7 @@ const Header = () => {
           <span className="hidden md:inline"> &gt;</span>
         </Button>
       </Link>
+      <Navigation />
     </header>
   );
 };
