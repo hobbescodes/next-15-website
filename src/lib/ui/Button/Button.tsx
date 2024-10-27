@@ -7,7 +7,7 @@ import type { VariantProps } from "cva";
 import type { ButtonHTMLAttributes } from "react";
 
 export const buttonVariants = cva({
-  base: "cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  base: "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   variants: {
     variant: {
       default: "bg-primary text-primary-foreground hover:bg-primary/90",
@@ -37,6 +37,7 @@ export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
+  isDisabled?: boolean;
 }
 
 const Button = ({
@@ -44,12 +45,19 @@ const Button = ({
   variant,
   size,
   asChild = false,
+  isDisabled = false,
   ...props
 }: ButtonProps) => {
   const Comp = asChild ? Slot : "button";
   return (
     <Comp
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(
+        buttonVariants({ variant, size }),
+        className,
+        isDisabled
+          ? "opacity-40 cursor-not-allowed bg-transparent hover:bg-transparent"
+          : "cursor-pointer"
+      )}
       {...props}
     />
   );
