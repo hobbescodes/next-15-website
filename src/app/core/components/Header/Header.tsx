@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Navigation } from "@/app/core/components";
+import { Navigation, Sidebar } from "@/app/core/components";
 import { Button } from "@/lib/ui";
 
 const Header = () => {
@@ -16,6 +16,7 @@ const Header = () => {
         </Button>
       </Link>
       <Navigation />
+      <Sidebar />
     </header>
   );
 };
