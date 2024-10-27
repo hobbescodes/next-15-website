@@ -6,11 +6,16 @@ import { NAVIGATION_LINKS } from "@/app/core/lib";
 import { Button, Link } from "@/app/ui";
 import { cn } from "@/lib/utils";
 
-const ApplicationLinks = () => {
+const ApplicationLinks = ({ sidebar = false }: { sidebar?: boolean }) => {
   const pathname = usePathname();
 
   return (
-    <div className="flex gap-4">
+    <div
+      className={cn(
+        "hidden md:flex gap-4",
+        sidebar && "flex flex-col md:hidden"
+      )}
+    >
       {Object.entries(NAVIGATION_LINKS.application).map(
         ([key, { label, href, isDisabled }]) => {
           const isActiveRoute = pathname.includes(href as string);
@@ -21,7 +26,7 @@ const ApplicationLinks = () => {
                 variant="unstyled"
                 className={cn(
                   "w-full justify-center",
-                  isActiveRoute ? "bg-accent/40" : "enabled:hover:bg-primary"
+                  isActiveRoute ? "bg-primary" : "hover:bg-primary/40"
                 )}
                 isDisabled={isDisabled}
               >

@@ -54,7 +54,9 @@ const Button = ({
       className={cn(
         buttonVariants({ variant, size }),
         className,
-        isDisabled ? "opacity-40 cursor-not-allowed" : "cursor-pointer"
+        isDisabled
+          ? "opacity-40 cursor-not-allowed bg-transparent hover:bg-transparent"
+          : "cursor-pointer"
       )}
       {...props}
     />
