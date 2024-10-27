@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 
 import { Layout } from "@/app/core/components";
 
-import "./globals.css";
+import "@/app/styles/globals.css";
 
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
