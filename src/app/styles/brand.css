@@ -8,11 +8,11 @@
   --popover: 0 0% 100%;
   --popover-foreground: var(--color-zinc-950);
 
-  --primary: var(--color-pink-900);
-  --primary-foreground: var(--color-pink-50);
+  --primary: var(--color-pink-100);
+  --primary-foreground: var(--color-pink-900);
 
-  --secondary: var(--color-pink-100);
-  --secondary-foreground: var(--color-pink-900);
+  --secondary: var(--color-pink-900);
+  --secondary-foreground: var(--color-pink-50);
 
   --muted: var(--color-zinc-100);
   --muted-foreground: var(--color-zinc-500);
@@ -41,11 +41,11 @@
     --popover: var(--color-zinc-950);
     --popover-foreground: var(--color-zinc-50);
 
-    --primary: var(--color-pink-50);
-    --primary-foreground: var(--color-pink-900);
+    --primary: var(--color-pink-800);
+    --primary-foreground: var(--color-pink-50);
 
-    --secondary: var(--color-pink-800);
-    --secondary-foreground: var(--color-pink-50);
+    --secondary: var(--color-pink-50);
+    --secondary-foreground: var(--color-pink-900);
 
     --muted: var(--color-zinc-800);
     --muted-foreground: var(--color-zinc-400);
