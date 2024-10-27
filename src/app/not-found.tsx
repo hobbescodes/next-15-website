@@ -1,4 +1,4 @@
-import { Button, Link } from "@/app/ui";
+import { Button, Link } from "@/lib/ui";
 
 /**
  * Global 404 (not found error) page.

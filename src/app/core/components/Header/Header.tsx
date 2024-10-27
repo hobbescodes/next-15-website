@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Navigation } from "@/app/core/components";
-import { Button } from "@/app/ui";
+import { Button } from "@/lib/ui";
 
 const Header = () => {
   return (

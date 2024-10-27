@@ -2,8 +2,8 @@
 
 import { usePathname } from "next/navigation";
 
-import { NAVIGATION_LINKS } from "@/app/core/lib";
-import { Button, Link } from "@/app/ui";
+import { NAVIGATION_LINKS } from "@/lib/constants";
+import { Button, Link } from "@/lib/ui";
 import { cn } from "@/lib/utils";
 
 const ApplicationLinks = ({ sidebar = false }: { sidebar?: boolean }) => {

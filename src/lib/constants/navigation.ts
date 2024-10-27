@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-import type { LinkProps } from "@/app/ui";
+import type { LinkProps } from "@/lib/ui";
 import type { IconType } from "react-icons";
 
 type ApplicationKeys = "about" | "projects" | "contact";
