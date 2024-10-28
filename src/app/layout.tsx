@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
 
 import { Layout } from "@/app/core/components";
@@ -25,11 +26,13 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Layout>{children}</Layout>
+        <ThemeProvider attribute="class">
+          <Layout>{children}</Layout>
+        </ThemeProvider>
       </body>
     </html>
   );
