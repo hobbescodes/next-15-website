@@ -4,7 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import type { LinkProps } from "@/lib/ui";
 import type { IconType } from "react-icons";
 
-type ApplicationKeys = "about" | "projects" | "contact";
+type ApplicationKeys = "projects" | "contact";
 type SocialKeys = "linkedin" | "github" | "twitter";
 
 interface Navigation extends LinkProps {
@@ -20,10 +20,6 @@ interface NavigationGroup {
 
 const NAVIGATION_LINKS: NavigationGroup = {
   application: {
-    about: {
-      label: "About",
-      href: "/about",
-    },
     projects: {
       label: "Projects",
       href: "/projects",
