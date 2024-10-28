@@ -16,14 +16,14 @@ const ThemeSwitch = () => {
   const toggleTheme = () =>
     resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
 
-  if (!isClient) return <div className="h-8 w-10 p-3" />;
+  if (!isClient) return <div className="h-10 w-10 px-4 py-2" />;
 
   return (
     // @ts-expect-error no need to add additional props to the theme toggle
     <Expand
       onToggle={toggleTheme}
       toggled={resolvedTheme === "light"}
-      className="rounded-md p-3 hover:text-primary-foreground mt-px md:mt-0.5"
+      className="rounded-md px-4 py-2 hover:text-primary-foreground mt-px md:mt-0.5"
     />
   );
 };
