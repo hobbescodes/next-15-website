@@ -1,3 +1,4 @@
+import app from "@/lib/config/app";
 import { NAVIGATION_LINKS } from "@/lib/constants";
 import { Button, Link } from "@/lib/ui";
 
@@ -19,7 +20,7 @@ const Footer = () => {
           )
         )}
       </div>
-      &copy; {new Date().getFullYear()} hobbescodes
+      &copy; {new Date().getFullYear()} {app.copy}
     </footer>
   );
 };

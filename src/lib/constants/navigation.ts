@@ -1,6 +1,8 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
+import app from "@/lib/config/app";
+
 import type { LinkProps } from "@/lib/ui";
 import type { IconType } from "react-icons";
 
@@ -33,17 +35,17 @@ const NAVIGATION_LINKS: NavigationGroup = {
   socials: {
     linkedin: {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/jakobhauble/",
+      href: app.socials.linkedin,
       icon: FaLinkedin,
     },
     github: {
       label: "GitHub",
-      href: "https://www.github.com/hobbescodes/",
+      href: app.socials.github,
       icon: FaGithub,
     },
     twitter: {
       label: "Twitter",
-      href: "https://www.x.com/hobbescodes/",
+      href: app.socials.twitter,
       icon: FaXTwitter,
     },
   },
