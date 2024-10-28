@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Navigation, Sidebar } from "@/app/core/components";
+import { Navigation, Sidebar, ThemeSwitcher } from "@/app/core/components";
 import { Button } from "@/lib/ui";
 
 const Header = () => {
@@ -15,8 +15,11 @@ const Header = () => {
           <span className="hidden md:inline"> &gt;</span>
         </Button>
       </Link>
-      <Navigation />
-      <Sidebar />
+      <div className="flex gap-4 justify-center">
+        <ThemeSwitcher />
+        <Navigation />
+        <Sidebar />
+      </div>
     </header>
   );
 };
