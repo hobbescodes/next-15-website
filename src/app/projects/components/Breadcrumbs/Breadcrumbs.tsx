@@ -9,7 +9,7 @@ interface Props {
 
 const Breadcrumbs = ({ breadcrumbs }: Props) => {
   return (
-    <div className="flex">
+    <div className="flex mx-6">
       {breadcrumbs.map((crumb, index) => {
         const isDisabled = index === breadcrumbs.length - 1;
 
